@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+import androidx.test.runner.AndroidJUnit4;
+
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -18,9 +20,6 @@ import static org.junit.Assert.*;
 public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() throws Exception {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.openclassrooms.go4lunch", appContext.getPackageName());
     }
 }

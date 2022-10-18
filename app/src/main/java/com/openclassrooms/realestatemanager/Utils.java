@@ -24,6 +24,14 @@ public class Utils {
     }
 
     /**
+     * Conversion d'un prix d'un bien immobilier (Euros vers Dollars)
+     * @param euro
+     * @return
+     */
+    public static int convertEuroToDollars(int euro){
+        return (int) Math.round(euro * 0.979); }
+
+    /**
      * Conversion de la date d'aujourd'hui en un format plus approprié
      * NOTE : NE PAS SUPPRIMER, A MONTRER DURANT LA SOUTENANCE
      * @return
@@ -32,6 +40,16 @@ public class Utils {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         return dateFormat.format(new Date());
     }
+
+    /**
+     * Conversion de la date d'aujourd'hui en un format 15/01/2022
+     * @return
+     */
+    public static String getTodayDateOKFormat(){
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return dateFormat.format(new Date());
+    }
+
 
     /**
      * Vérification de la connexion réseau

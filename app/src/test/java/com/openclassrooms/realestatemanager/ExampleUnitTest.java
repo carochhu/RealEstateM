@@ -1,5 +1,7 @@
 package com.openclassrooms.realestatemanager;
 
+import static com.openclassrooms.realestatemanager.Utils.convertEuroToDollars;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
