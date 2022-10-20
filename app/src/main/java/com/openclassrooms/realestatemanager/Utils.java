@@ -1,5 +1,6 @@
 package com.openclassrooms.realestatemanager;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -65,7 +66,7 @@ public class Utils {
         //return wifi.isWifiEnabled();
         ConnectivityManager connMgr = (ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = Objects.requireNonNull(connMgr).getActiveNetworkInfo();
+        @SuppressLint("MissingPermission") NetworkInfo networkInfo = Objects.requireNonNull(connMgr).getActiveNetworkInfo();
         return (networkInfo != null && networkInfo.isConnected());
 
     }

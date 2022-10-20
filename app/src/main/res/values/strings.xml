@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Real Estate Manager</string>
+    <string name="page_title_create">CREATE ESTATE</string>
+    <string name="description_estate_picture">Estate picture</string>
+    <string name="title_photos">Pictures</string>
+    <string name="title_description">Description</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+    <string name="title_surface">Surface:</string>
+    <string name="title_rooms">Rooms:</string>
+    <string name="title_bathrooms">Bathrooms:</string>
+    <string name="title_bed">Beds:</string>
+    <string name="title_location">Location:</string>
+    <string name="surface_value">750sqm</string>
+    <string name="rooms_value">8</string>
+    <string name="bathrooms_value">2</string>
+    <string name="bedrooms_value">4</string>
+    <string name="location_value">740 Avenue des Champs Elysées 75008 Paris</string>
+    surface_value
 </resources>
