@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.DetailFragment">
 
     <TextView
         android:id="@+id/title_photos"
@@ -13,7 +15,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:padding="15dp"
-        android:layout_constraintTop_toTopOf="parent"
+        android:layout_constraintTop_toBottomOf="@+id/topAppBar2"
         android:layout_constraintStart_toStartOf="parent"
         />
 

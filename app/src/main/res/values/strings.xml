@@ -1,6 +1,30 @@
 <resources>
     <string name="app_name">Real Estate Manager</string>
-    <string name="page_title_create">CREATE ESTATE</string>
+
+    <!-- ADD ESTATE -->
+    <string name="page_title_add">ADD ESTATE</string>
+    <string name="titleHint_mandateNumber">Mandate number</string>
+    <string name="titleHint_surface">Surface</string>
+    <string name="titleHint_bedrooms">Bedrooms</string>
+    <string name="titleHint_ground">Ground</string>
+    <string name="titleHint_price">Price</string>
+    <string name="titleHint_description">Description</string>
+    <string name="titleHint_adress">Adress</string>
+    <string name="titleHint_zipcode">Zip code</string>
+    <string name="titleHint_city">City</string>
+    <string name="title_pt_interest">Nearby point interest:</string>
+    <string name="title_status">Estate status:</string>
+    <string name="titleHint_upToSale">Up to sale date</string>
+    <string name="titleHint_solddate">Sold date</string>
+
+    <!-- SEARCH ESTATE -->
+    <string name="page_title_search">SEARCH ESTATE</string>
+
+    <!-- UPDATE ESTATE -->
+    <string name="page_title_update">UPDATE ESTATE</string>
+
+    <!-- ESTATE DETAILS -->
+    <string name="page_title_detail">ESTATE DETAILS</string>
     <string name="description_estate_picture">Estate picture</string>
     <string name="title_photos">Pictures</string>
     <string name="title_description">Description</string>
@@ -15,5 +39,52 @@
     <string name="bathrooms_value">2</string>
     <string name="bedrooms_value">4</string>
     <string name="location_value">740 Avenue des Champs Elysées 75008 Paris</string>
-    surface_value
+
+
+    <string-array name="ESTATES">
+        <item>House</item>
+        <item>Flat</item>
+        <item>Duplex</item>
+        <item>Penthouse</item>
+    </string-array>
+
+    <string-array name="ROOMS">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5 et +</item>
+    </string-array>
+
+    <string-array name="BEDROOMS">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5 et +</item>
+    </string-array>
+
+    <string-array name="BATHROOMS">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4 et +</item>
+    </string-array>
+
+    <string-array name="AGENT">
+        <item>Anna Kour</item>
+        <item>John Simon</item>
+        <item>Martin Dupont</item>
+    </string-array>
+
+    <string-array name="DESCRIPTION">
+        <item>Kitchen</item>
+        <item>Living Room</item>
+        <item>Bedroom</item>
+        <item>Bathroom</item>
+        <item>Garden</item>
+
+    </string-array>
+
 </resources>

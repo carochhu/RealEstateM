@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.CreateActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar2"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/page_title_add" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Spinner
+        android:id="@+id/spinnerEstateType"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/ESTATES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar" />
+
+    <Spinner
+        android:id="@+id/spinnerRooms"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/ROOMS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/spinnerEstateType" />
+
+
+    <Spinner
+        android:id="@+id/spinnerBathrooms"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/BATHROOMS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/spinnerRooms" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginVertical="13dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:gravity="center"
+        android:hint="@string/titleHint_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/spinnerBathrooms" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/mandateNumber"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:hint="@string/titleHint_mandateNumber"
+        android:textFontWeight="@integer/material_motion_duration_long_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar" />
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/surface"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="@string/titleHint_surface"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:textFontWeight="@integer/material_motion_duration_long_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mandateNumber" />
+
+    <Spinner
+        android:id="@+id/spinnerBedrooms"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/BEDROOMS"
+        android:hint="@string/titleHint_bedrooms"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surface" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ground"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="@string/titleHint_ground"
+        android:textSize="14sp"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerBedrooms" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="145dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/titleHint_description"
+        android:inputType="textMultiLine"
+        android:paddingBottom="7dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ground"
+         />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/adress"
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="40dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/titleHint_adress"
+        android:paddingBottom="7dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/zipCode"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="@string/titleHint_zipcode"
+        android:textSize="14sp"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adress" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/city"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginVertical="13dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:gravity="center"
+        android:hint="@string/titleHint_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/adress" />
+
+
+
+
+
+<TextView
+    android:id="@+id/title_nearby"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:layout_margin="15dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginEnd="20dp"
+    android:textStyle="bold"
+    android:text="@string/title_pt_interest"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/zipCode"
+    />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/box_schools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:buttonTint="@color/colorPrimary"
+        android:text="Schools"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_nearby"
+        />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/box_stores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:buttonTint="@color/colorPrimary"
+        android:text="Stores"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/box_schools"
+        app:layout_constraintTop_toBottomOf="@id/title_nearby"
+        />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/box_park"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:buttonTint="@color/colorPrimary"
+        android:text="Park"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/box_stores"
+        app:layout_constraintTop_toBottomOf="@id/title_nearby"
+        />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/box_restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:buttonTint="@color/colorPrimary"
+        android:text="Restaurants"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/box_park"
+        app:layout_constraintTop_toBottomOf="@id/title_nearby"
+        />
+
+    <TextView
+        android:id="@+id/title_estate_status"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:text="@string/title_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box_schools"
+        />
+
+    <RadioButton
+        android:id="@+id/sold_radiobtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorPrimary"
+        android:text="Sold"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/title_estate_status"
+        app:layout_constraintTop_toBottomOf="@id/box_schools"
+        />
+
+    <RadioButton
+        android:id="@+id/available_radiobtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorPrimary"
+        android:text="Available"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/sold_radiobtn"
+        app:layout_constraintTop_toBottomOf="@id/box_schools"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/up_to_sale"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="@string/titleHint_upToSale"
+        android:textSize="14sp"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_estate_status" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/soldDate"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginVertical="13dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:gravity="center"
+        android:hint="@string/titleHint_solddate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/title_estate_status" />
+
+    <Spinner
+        android:id="@+id/spinnerAgent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/AGENT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soldDate"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
